@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const MainRoot = styled.div`
   width:100%;
@@ -18,19 +19,21 @@ const MainCenter = styled.div`
   font-size: 60px;
   font-weight: bold;
   color: #484859;
-  height:65vh;
+  height:70vh;
 `;
 
 const MainMenuBar = styled.div`
-  width: 800px;
+  width: 700px;
   height: 250px;
-  margin: 40px 0px 0px 0px;
+  margin: 120px 0px 0px 0px;
   display:flex;
   flex-direction:column;
   justify-content:space-around;
   border-radius:10px;
   background-color: #EEEEEE;
+  box-shadow: 5px 5px 10px #DDDDDD;
 `;
+
 const MainBtnSets = styled.div`
   display:flex;
   align-items:center;
@@ -63,13 +66,17 @@ const MainBtnIcon = styled.div`
 `;
 
 export const Main = () => {
+  const navigate = useNavigate();
+  const moveAboutPage = () =>{
+    navigate('/about');
+  };
   return(
     <MainRoot>
       <MainCenter>
         <MainTitle>HYEON JEONG JUN</MainTitle>
         <MainMenuBar>
           <MainBtnSets>
-            <MainBtnSet>
+            <MainBtnSet onClick={moveAboutPage}>
               <MainBtnIcon></MainBtnIcon>
               <MainBtnText>About</MainBtnText>
             </MainBtnSet>
