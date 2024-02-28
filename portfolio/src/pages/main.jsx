@@ -70,6 +70,9 @@ export const Main = () => {
   const moveAboutPage = () =>{
     navigate('/about');
   };
+  const moveDailyPage = () =>{
+    navigate('/daily');
+  };
   return(
     <MainRoot>
       <MainCenter>
@@ -80,9 +83,9 @@ export const Main = () => {
               <MainBtnIcon></MainBtnIcon>
               <MainBtnText>About</MainBtnText>
             </MainBtnSet>
-            <MainBtnSet>
+            <MainBtnSet onClick={moveDailyPage}>
               <MainBtnIcon></MainBtnIcon>
-              <MainBtnText>About</MainBtnText>
+              <MainBtnText>Daily</MainBtnText>
             </MainBtnSet>
             <MainBtnSet>
               <MainBtnIcon></MainBtnIcon>
