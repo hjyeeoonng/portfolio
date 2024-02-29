@@ -9,3 +9,7 @@ app.listen(3001, function () {
 app.get("/", function (req, res) {
     res.send("hello");
 });
+
+app.get("/connectiontest", function (req, res) {
+  
+});
